@@ -36,7 +36,7 @@ def reserva(check)
           remove_ips_disponiveis = ['./vlan_ips_disponiveis.txt']
           remove_ips_disponiveis.each do |remove_ip_disponivel|
             verificacao = File.read('./vlan_ips_disponiveis.txt')
-            nova_saida = verificacao.sub(/#{ipreserva}/, ' ')
+            nova_saida = verificacao.sub(/#{ipreserva}/, '')
             File.open(remove_ip_disponivel, "w") {|temporario| temporario.puts nova_saida}
             end
           $LOG.debug("nova lista de disponiveis: #{ip_free}")
