@@ -1,6 +1,7 @@
 require "logger"
 $LOG = Logger.new("log.vlan_ips")
 
+
 def reserva(check)
   if check == "run"
     begin
